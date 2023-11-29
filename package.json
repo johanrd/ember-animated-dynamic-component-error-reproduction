@@ -112,5 +112,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-animated": "^1.1.1"
   }
 }

@@ -1,7 +1,15 @@
 {{page-title "EmberAnimatedDynamicComponentErrorReproduction"}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<button type="button" {{on "click" this.toggleThing}}>Toggle</button>
+<AnimatedContainer>
+  {{#animated-if this.showThing use=this.transition }}
+      <div class="message" {{on "click" this.toggleThing}}>
+          Hello!
+      </div>
+  {{/animated-if}}
+</AnimatedContainer>
+<p>
+  This is outside of the container.
+</p>
 
 {{outlet}}
