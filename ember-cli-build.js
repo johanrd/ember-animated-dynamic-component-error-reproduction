@@ -11,5 +11,7 @@ module.exports = function (defaults) {
     // Add options here
   });
 
-  return require('@embroider/compat').compatBuild(app, Webpack);
+  return require('@embroider/compat').compatBuild(app, Webpack, {
+    staticComponents: true,
+  });
 };
